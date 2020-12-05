@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import HomePage from "../HomePage/HomePage";
 import SignupPage from "../SignupPage/SignupPage";
 import LoginPage from "../LoginPage/LoginPage";
+import HabitPage from "../HabitPage/HabitPage";
 import userService from "../../utils/userService";
 
 class App extends React.Component {
@@ -13,6 +14,7 @@ class App extends React.Component {
       user: userService.getUser(),
     };
   }
+
   handleLogout = () => {
     userService.logout();
     this.setState({ user: null });
@@ -25,12 +27,23 @@ class App extends React.Component {
     return (
       <div>
         <header className="header-footer">HABIT &nbsp;&nbsp; TRACKER</header>
+
         <Switch>
           <Route
             exact
             path="/"
             render={() => (
               <HomePage
+                handleLogout={this.handleLogout}
+                user={this.state.user}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/habit"
+            render={() => (
+              <HabitPage
                 handleLogout={this.handleLogout}
                 user={this.state.user}
               />
