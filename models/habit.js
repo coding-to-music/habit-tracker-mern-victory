@@ -17,7 +17,7 @@ const practiceSchema = new Schema(
 const habitSchema = new Schema(
   {
     name: { type: String },
-    decsription: { type: String },
+    description: { type: String },
     // imageURL: {
     //   type: mongoose.SchemaTypes.Url,
     // },

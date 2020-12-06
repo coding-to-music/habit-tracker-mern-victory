@@ -5,6 +5,8 @@ import HomePage from "../HomePage/HomePage";
 import SignupPage from "../SignupPage/SignupPage";
 import LoginPage from "../LoginPage/LoginPage";
 import HabitPage from "../HabitPage/HabitPage";
+import CreateHabitPage from "../HabitPage/CreateHabitPage";
+import EditHabitPage from "../HabitPage/EditHabitPage.jsx";
 import userService from "../../utils/userService";
 
 class App extends React.Component {
@@ -25,7 +27,7 @@ class App extends React.Component {
   };
   render() {
     return (
-      <div>
+      <div className="container">
         <Switch>
           <Route
             exact
@@ -42,6 +44,26 @@ class App extends React.Component {
             path="/habits"
             render={() => (
               <HabitPage
+                handleLogout={this.handleLogout}
+                user={this.state.user}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/habits/edit/:id"
+            render={() => (
+              <EditHabitPage
+                handleLogout={this.handleLogout}
+                user={this.state.user}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/habits/create"
+            render={() => (
+              <CreateHabitPage
                 handleLogout={this.handleLogout}
                 user={this.state.user}
               />
