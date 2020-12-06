@@ -39,9 +39,11 @@ function login(creds) {
     .then(({ token }) => tokenService.setToken(token));
 }
 
-export default {
+const userService = {
   signup,
   getUser,
   logout,
   login,
 };
+
+export default userService;

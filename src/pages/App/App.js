@@ -26,8 +26,6 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <header className="header-footer">HABIT &nbsp;&nbsp; TRACKER</header>
-
         <Switch>
           <Route
             exact
@@ -41,7 +39,7 @@ class App extends React.Component {
           />
           <Route
             exact
-            path="/habit"
+            path="/habits"
             render={() => (
               <HabitPage
                 handleLogout={this.handleLogout}
