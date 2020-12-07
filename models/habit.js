@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const practiceSchema = new Schema(
+const sessionSchema = new Schema(
   {
     date: {
       type: Date,
@@ -21,7 +21,7 @@ const habitSchema = new Schema(
     // imageURL: {
     //   type: mongoose.SchemaTypes.Url,
     // },
-    // practice: { type: [practiceSchema] },
+    session: { type: [sessionSchema] },
     // userId: {
     //   type: Schema.Types.ObjectId,
     //   ref: "user",

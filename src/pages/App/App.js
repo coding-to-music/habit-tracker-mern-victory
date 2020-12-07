@@ -63,11 +63,10 @@ class App extends React.Component {
           <Route
             exact
             path="/habits/:id"
-            render={({ params }) => (
+            render={() => (
               <HabitPage
                 handleLogout={this.handleLogout}
                 user={this.state.user}
-                params={params}
               />
             )}
           />
