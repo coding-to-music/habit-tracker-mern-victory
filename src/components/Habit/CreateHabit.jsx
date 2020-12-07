@@ -12,7 +12,7 @@ class CreateHabit extends React.Component {
       description: "",
       user: props.user,
     };
-    // console.log(this.state.user._id);
+    console.log(this.state.user._id);
   }
 
   onChangeHname(e) {
@@ -37,7 +37,7 @@ class CreateHabit extends React.Component {
       .post("http://localhost:3001/api/habits/add", habit)
       .then((res) => console.log(res.data));
 
-    window.location = "/";
+    window.location = "/vision";
   }
   render() {
     return (

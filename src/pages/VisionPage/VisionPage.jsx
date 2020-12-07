@@ -1,15 +1,14 @@
-import "./HomePage.css";
+import "./VisionPage.css";
 import React from "react";
 import NavBar from "../../components/NavBar/NavBar";
-import { Link } from "react-router-dom";
+import VisionBoard from "../../components/VisionBoard/VisionBoard";
 
 const HomePage = (props) => {
   return (
     <div className="HomePage">
       <NavBar user={props.user} handleLogout={props.handleLogout} />
-      <Link to="/vision">Vision Board</Link>
       <div className="">
-        <p>Create your vision board and start tracking tracking to habits!</p>
+        <VisionBoard user={props.user} />
       </div>
     </div>
   );

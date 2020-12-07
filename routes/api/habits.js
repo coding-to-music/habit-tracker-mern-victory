@@ -9,6 +9,8 @@ router.route("/").get((req, res) => {
 router.route("/add").post((req, res) => {
   const name = req.body.hname;
   const description = req.body.description;
+  console.log(req.params);
+  console.log(req.body);
   const newHabit = new Habit({
     name,
     description,

@@ -1,7 +1,8 @@
 import "./App.css";
 import React from "react";
-import { Route, Switch, useParams } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import HomePage from "../HomePage/HomePage";
+import VisionPage from "../VisionPage/VisionPage";
 import SignupPage from "../SignupPage/SignupPage";
 import LoginPage from "../LoginPage/LoginPage";
 import HabitPage from "../HabitPage/HabitPage";
@@ -41,11 +42,32 @@ class App extends React.Component {
           />
           <Route
             exact
-            path="/habits"
+            path="/vision"
             render={() => (
+              <VisionPage
+                handleLogout={this.handleLogout}
+                user={this.state.user}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/habits/create"
+            render={() => (
+              <CreateHabitPage
+                handleLogout={this.handleLogout}
+                user={this.state.user}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/habits/:id"
+            render={({ params }) => (
               <HabitPage
                 handleLogout={this.handleLogout}
                 user={this.state.user}
+                params={params}
               />
             )}
           />
@@ -57,16 +79,6 @@ class App extends React.Component {
                 handleLogout={this.handleLogout}
                 user={this.state.user}
                 habitId={match.params.id}
-              />
-            )}
-          />
-          <Route
-            exact
-            path="/habits/create"
-            render={() => (
-              <CreateHabitPage
-                handleLogout={this.handleLogout}
-                user={this.state.user}
               />
             )}
           />

@@ -1,12 +1,13 @@
 import React from "react";
 import axios from "axios";
-import Habit from "./Habit";
+import HabitCard from "./HabitCard";
 
 class HabitList extends React.Component {
   constructor(props) {
     super(props);
     this.deleteHabit = this.deleteHabit.bind(this);
     this.state = { habits: [] };
+    this.user = props.user;
   }
   componentDidMount() {
     axios
@@ -24,15 +25,20 @@ class HabitList extends React.Component {
   habitsList() {
     return this.state.habits.map((habit) => {
       return (
-        <Habit key={habit._id} habit={habit} deleteHabit={this.deleteHabit} />
+        <HabitCard
+          key={habit._id}
+          habit={habit}
+          deleteHabit={this.deleteHabit}
+          user={this.user}
+        />
       );
     });
   }
   render() {
     return (
       <div className="habit">
-        <h1>All Habits</h1>
-        <h2>{this.habitsList()}</h2>
+        <p>All Habits</p>
+        <div>{this.habitsList()}</div>
       </div>
     );
   }
