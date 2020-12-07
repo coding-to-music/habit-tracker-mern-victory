@@ -30,9 +30,10 @@ router.route("/:id").delete((req, res) => {
 });
 
 router.route("/update/:id").post((req, res) => {
+  console.log("inside server habit update");
   Habit.findById(req.params.id)
     .then((habit) => {
-      habit.name = req.body.name;
+      habit.name = req.body.hname;
       habit.description = req.body.description;
       habit
         .save()

@@ -37,7 +37,7 @@ class CreateHabit extends React.Component {
       .post("http://localhost:3001/api/habits/add", habit)
       .then((res) => console.log(res.data));
 
-    window.location = "/habits";
+    window.location = "/";
   }
   render() {
     return (
