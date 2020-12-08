@@ -32,7 +32,7 @@ const ChartComponent = (props) => {
 };
 
 const SessionPlot = (props) => {
-  console.log("Session plot being executed ");
+  // console.log("Session plot being executed ");
   const [sess, setSess] = useState([
     {
       x: "",

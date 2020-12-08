@@ -8,7 +8,7 @@ router.get("/:id/getAll", (req, res) => {
     .populate("sessions")
     .exec(function (err, habitwithsessions) {
       if (!err && habitwithsessions.sessions.length > 0) {
-        console.log(habitwithsessions.sessions);
+        // console.log(habitwithsessions.sessions);
         res.json(habitwithsessions.sessions);
       }
     });
