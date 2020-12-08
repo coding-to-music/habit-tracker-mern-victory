@@ -32,6 +32,7 @@ class CreateHabit extends React.Component {
     const habit = {
       description: this.state.description,
       hname: this.state.hname,
+      token: localStorage.getItem("token"),
     };
     // console.log(habit);
     axios
@@ -56,7 +57,7 @@ class CreateHabit extends React.Component {
           </div>
 
           <div className="form-group">
-            <label>Habit Description:</label>
+            <label>Habit Affirmation:</label>
             <input
               type="text"
               className="form-control"

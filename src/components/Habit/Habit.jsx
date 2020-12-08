@@ -1,16 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Session from "../Session/Session";
+import SessionPlot from "../Session/SessionPlot";
+import FetchQuote from "../FetchQuote/FetchQuote";
 
 const Habit = (props) => {
   return (
     <div className="habit">
-      <p>Habit Name: {props.habit.name}</p>
-      <p>Habit Description: {props.habit.description}</p>
-      <p>user: {props.user._id} </p>
-
       <div>
-        <p>Habit componenet</p>
         <Link to={`/habits/update/${props.habit._id}`}>edit</Link>|
         <a
           href="/"
@@ -21,8 +18,19 @@ const Habit = (props) => {
           delete
         </a>
       </div>
+
       <br />
-      <Session habitId={props.habit._id} />
+      <br />
+      <p> {props.habit.name}</p>
+      <p>Affirmation: {props.habit.description}</p>
+      <br />
+      <br />
+      <FetchQuote />
+
+      <div id="sessiondiv">
+        <SessionPlot habitId={props.habit._id} />
+        <Session habitId={props.habit._id} />
+      </div>
     </div>
   );
 };

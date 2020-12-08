@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 
 const HabitCard = (props) => (
   <div className="habit">
-    <p>Habit Name: {props.habit.name}</p>
-    <p>Habit Description: {props.habit.description}</p>
-    <p>user: {props.user._id} </p>
+    <p>
+      <b>{props.habit.name}</b>
+    </p>
+    <p>{props.habit.description}</p>
 
     <div>
       <Link to={`/habits/update/${props.habit._id}`}>edit</Link>|

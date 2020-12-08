@@ -8,6 +8,10 @@ const NavBar = (props) => {
       <Link to="" className="nav-link">
         HOME
       </Link>
+      |
+      <Link to="/vision" className="nav-link">
+        VISION BOARD
+      </Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
       <Link to="" className="nav-link" onClick={props.handleLogout}>
         LOG OUT

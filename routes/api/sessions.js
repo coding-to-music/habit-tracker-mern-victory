@@ -1,11 +1,31 @@
-// const router = require("express").Router();
-// let Habit = require("../../models/habit");
-// const { default: Session } = require("../../src/components/Session/Session");
+const router = require("express").Router();
+const habit = require("../../models/habit");
+let Habit = require("../../models/habit");
+const auth = require("../../config/auth");
 
-// router.route("/").get((req, res) => {
-//   Habit.findById(req.params.id, function (err, habit) {
-//     Session.find({ habitId: req.params.id }, function (err, sessions) {});
-//   })
-//     .then((habits) => res.json(habits))
-//     .catch((err) => res.status(400).json("Error: " + err));
-// });
+router.get("/:id/getAll", (req, res) => {
+  console.log(req.params.id);
+  Habit.findById(req.params.id)
+    .populate("sessions")
+    .exec(function (err, habitwithsessions) {
+      if (!err && habitwithsessions.sessions.length > 0) {
+        console.log(habitwithsessions.sessions);
+        res.json(habitwithsessions.sessions);
+      }
+    });
+});
+router.post("/:id/addsession", auth, (req, res) => {
+  console.log(req.params.id);
+  console.log(req.body);
+  Habit.findById(req.params.id)
+    .then((habit) => {
+      habit.sessions.push(req.body);
+      habit
+        .save()
+        .then((response) => res.send(response))
+        .catch((err) => res.status(400).json("Error: " + err));
+    })
+    .catch((err) => res.status(400).json("Error: " + err));
+});
+
+module.exports = router;

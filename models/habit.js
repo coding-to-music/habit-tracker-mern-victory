@@ -21,11 +21,7 @@ const habitSchema = new Schema(
     // imageURL: {
     //   type: mongoose.SchemaTypes.Url,
     // },
-    session: { type: [sessionSchema] },
-    // userId: {
-    //   type: Schema.Types.ObjectId,
-    //   ref: "user",
-    // },
+    sessions: { type: [sessionSchema] },
   },
   { timestamps: true }
 );

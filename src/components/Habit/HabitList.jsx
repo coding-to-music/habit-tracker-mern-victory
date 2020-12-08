@@ -11,15 +11,26 @@ class HabitList extends React.Component {
   }
   componentDidMount() {
     axios
-      .get("http://localhost:3001/api/habits")
+      .get("http://localhost:3001/api/habits", {
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("token"),
+        },
+      })
       .then((res) => {
+        console.log(res.data);
         this.setState({ habits: res.data });
       })
       .catch((err) => console.log(err));
   }
   deleteHabit(id) {
     console.log("inside delete" + id);
-    axios.delete("/api/habits/" + id).then((res) => console.log(res.data));
+    axios
+      .delete("/api/habits/" + id, {
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("token"),
+        },
+      })
+      .then((res) => console.log(res.data));
     this.setState({ habits: this.state.habits.filter((el) => el._id !== id) });
   }
   habitsList() {
@@ -37,7 +48,6 @@ class HabitList extends React.Component {
   render() {
     return (
       <div className="habit">
-        <p>All Habits</p>
         <div>{this.habitsList()}</div>
       </div>
     );

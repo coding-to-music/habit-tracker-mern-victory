@@ -12,8 +12,6 @@ const HabitPage = (props) => {
     <div className="HabitPage">
       <NavBar user={props.user} handleLogout={props.handleLogout} />
       <div className="">
-        <p>habit page</p>
-
         <Habit
           habit={history.location.params.habit}
           deleteHabit={history.location.params.deleteHabit}
