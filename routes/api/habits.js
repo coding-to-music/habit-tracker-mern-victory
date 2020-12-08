@@ -40,7 +40,7 @@ router.route("/:id").get((req, res) => {
 
 router.delete("/:id", auth, (req, res) => {
   Habit.findByIdAndDelete(req.params.id).then(() => {
-    console.log(req.body);
+    // console.log(req.body);
     // User.findById(req.user._id)
     //   .then((user) => {
     //     console.log(user);
@@ -55,7 +55,7 @@ router.delete("/:id", auth, (req, res) => {
 });
 
 router.post("/update/:id", auth, (req, res) => {
-  console.log("inside server habit update");
+  // console.log("inside server habit update");
   Habit.findById(req.params.id)
     .then((habit) => {
       habit.name = req.body.hname;

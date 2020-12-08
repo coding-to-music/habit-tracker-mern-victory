@@ -4,6 +4,7 @@ import Calendar from "react-calendar";
 import axios from "axios";
 
 const Session = (props) => {
+  console.log("Session being executed ");
   const formRef = useRef(null);
   const history = useHistory();
   const [date, setDate] = useState(new Date());
@@ -23,22 +24,18 @@ const Session = (props) => {
       date: date,
       duration: parseInt(duration),
     };
-    console.log(session);
-    console.log(props.habitId);
+
     axios
       .post(
         "http://localhost:3001/api/sessions/" + props.habitId + "/addsession",
         session
       )
-      .then((res) => console.log(res.data));
-    history.push("/vision");
+      .then((res) => console.log()); //(res.data)
+    // history.push("");
   };
 
   return (
     <div className="habit">
-      <br />
-      <br />
-      <br />
       <br />
       <p>Session Date: {date.toDateString()}</p>
       <p>session Duration: {parseInt(duration)}</p>

@@ -1,10 +1,9 @@
 const router = require("express").Router();
-const habit = require("../../models/habit");
-let Habit = require("../../models/habit");
+const Habit = require("../../models/habit");
 const auth = require("../../config/auth");
 
 router.get("/:id/getAll", (req, res) => {
-  console.log(req.params.id);
+  // console.log(req.params.id);
   Habit.findById(req.params.id)
     .populate("sessions")
     .exec(function (err, habitwithsessions) {
@@ -15,8 +14,6 @@ router.get("/:id/getAll", (req, res) => {
     });
 });
 router.post("/:id/addsession", auth, (req, res) => {
-  console.log(req.params.id);
-  console.log(req.body);
   Habit.findById(req.params.id)
     .then((habit) => {
       habit.sessions.push(req.body);

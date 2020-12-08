@@ -13,7 +13,7 @@ code {
 }
 
 #graph {
-  width: 500px;
+  width: 600px;
   height: auto;
 }
 
@@ -30,4 +30,9 @@ code {
 
 #sessiondiv {
   display: flex;
+}
+
+#habit-page-edit-delete-link {
+  display: flex;
+  justify-content: flex-end;
 }

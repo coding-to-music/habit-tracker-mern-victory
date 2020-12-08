@@ -5,6 +5,7 @@ import SessionPlot from "../Session/SessionPlot";
 import FetchQuote from "../FetchQuote/FetchQuote";
 
 const Habit = (props) => {
+  console.log("Habit being executed ");
   return (
     <div className="habit">
       <div>
@@ -28,7 +29,7 @@ const Habit = (props) => {
       <FetchQuote />
 
       <div id="sessiondiv">
-        <SessionPlot habitId={props.habit._id} />
+        <SessionPlot habitId={props.habit._id} habitName={props.habitName} />
         <Session habitId={props.habit._id} />
       </div>
     </div>

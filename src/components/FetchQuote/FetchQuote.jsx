@@ -8,12 +8,12 @@ function FetchQuote() {
 
   useEffect(() => {
     fetchQuote();
-    const intervalID = setInterval(() => {
-      fetchQuote();
-    }, 0.5 * 60 * 60 * 1000);
-    return () => {
-      clearInterval(intervalID);
-    };
+    // const intervalID = setInterval(() => {
+    //   fetchQuote();
+    // }, 0.5 * 60 * 60 * 1000);
+    // return () => {
+    //   clearInterval(intervalID);
+    // };
   }, []);
 
   function fetchQuote() {
