@@ -18,10 +18,8 @@ router.post("/add", auth, (req, res) => {
     description,
   });
   newHabit.save(function (err, habit) {
-    // console.log(req.user._id);
     User.findById(req.user._id)
       .then((user) => {
-        // console.log(user);
         user.habits.push(habit.id);
         user
           .save()
@@ -39,23 +37,12 @@ router.route("/:id").get((req, res) => {
 });
 
 router.delete("/:id", auth, (req, res) => {
-  Habit.findByIdAndDelete(req.params.id).then(() => {
-    // console.log(req.body);
-    // User.findById(req.user._id)
-    //   .then((user) => {
-    //     console.log(user);
-    //     user.habits.findByIdAndDelete(req.params.id);
-    //     // user
-    //     //   .save()
-    //     //   .then(() => res.json("user updated"))
-    //     //   .catch((err) => res.status(400).json("Error: " + err));
-    //   })
-    //   .catch((err) => res.status(400).json("Error: " + err));
-  });
+  Habit.findByIdAndDelete(req.params.id)
+    .then(() => {})
+    .catch((err) => res.status(400).json("Error: " + err));
 });
 
 router.post("/update/:id", auth, (req, res) => {
-  // console.log("inside server habit update");
   Habit.findById(req.params.id)
     .then((habit) => {
       habit.name = req.body.hname;

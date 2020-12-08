@@ -29,7 +29,7 @@ const Habit = (props) => {
       <FetchQuote />
 
       <div id="sessiondiv">
-        <SessionPlot habitId={props.habit._id} habitName={props.habitName} />
+        <SessionPlot habitId={props.habit._id} habitName={props.habit.name} />
         <Session habitId={props.habit._id} />
       </div>
     </div>

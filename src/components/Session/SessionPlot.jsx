@@ -11,7 +11,7 @@ import {
 
 const ChartComponent = (props) => {
   const lineData = props.sessionData;
-  // console.log("chart component being executed ");
+
   return (
     <>
       <div id="graph">
@@ -32,7 +32,6 @@ const ChartComponent = (props) => {
 };
 
 const SessionPlot = (props) => {
-  // console.log("Session plot being executed ");
   const [sess, setSess] = useState([
     {
       x: "",
@@ -88,12 +87,13 @@ const SessionPlot = (props) => {
         Plot sessions
       </button>
       <p>
-        You just practised <b>{sumDuration}</b> minutes of{" "}
-        <b>{props.habitName} this week</b>
+        You practised <b>{sumDuration}</b> minutes of
+        <b> {props.habitName}</b> this week
       </p>
       <p>
-        You have practised <b>{sumDurationAll}</b> minutes of{" "}
-        <b>{props.habitName} so far</b>
+        You have practised around <b>{Math.floor(sumDurationAll / 60)}</b> hours
+        of
+        <b> {props.habitName} </b> till now
       </p>
     </div>
   );

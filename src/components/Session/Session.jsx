@@ -4,7 +4,6 @@ import Calendar from "react-calendar";
 import axios from "axios";
 
 const Session = (props) => {
-  // console.log("Session being executed ");
   const formRef = useRef(null);
   const history = useHistory();
   const [date, setDate] = useState(new Date());

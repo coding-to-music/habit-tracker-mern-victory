@@ -36,13 +36,11 @@ class CreateHabit extends React.Component {
       hname: this.state.hname,
       token: localStorage.getItem("token"),
     };
-    // console.log(habit);
+
     axios
       .post("http://localhost:3001/api/habits/add", habit)
       .then((res) => console.log(res.data));
 
-    // this.props.location = "/vision";
-    // console.log(this.props);
     this.props.history.push("/vision");
   }
   render() {
