@@ -4,7 +4,7 @@ function FetchQuote() {
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
   const [imgSrc, setImgSrc] = useState("");
-  var quotes = "";
+  // var quotes = "";
 
   useEffect(() => {
     fetchQuote();
@@ -30,16 +30,17 @@ function FetchQuote() {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         chooseRandomQuote(data);
 
         // setImgSrc(data.contents.quotes[0].background);
       });
   }
   function chooseRandomQuote(data) {
-    console.log(data.length);
-    const randNum = Math.floor(Math.random() * (data.length - 1));
-    console.log(randNum);
+    // console.log(data.length);
+    let randNum = Math.floor(Math.random() * (data.length - 1));
+    while (randNum === 13 || randNum === 14)
+      randNum = Math.floor(Math.random() * (data.length - 1));
     setQuote(data[randNum].quote);
     setAuthor(data[randNum].author);
   }

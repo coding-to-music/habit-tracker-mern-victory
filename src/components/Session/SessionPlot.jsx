@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 // import { useHistory } from "react-router-dom";
 import axios from "axios";
-import { VictoryChart, VictoryTheme, VictoryLine, VictoryLabel } from "victory";
+import {
+  VictoryChart,
+  VictoryTheme,
+  VictoryLine,
+  VictoryLabel,
+  VictoryBar,
+} from "victory";
 
 const SessionPlot = (props) => {
   // const history = useHistory();
@@ -17,9 +23,14 @@ const SessionPlot = (props) => {
         const sessions = res.data;
         const dates = [];
         const durations = [];
+        const sessionsForPlot = [{}];
         sessions.map((session) => {
           dates.push(session.date.toString());
           durations.push(parseInt(session.duration));
+          sessions.sessionsForPlot.push({
+            x: session.date.toString(),
+            y: parseInt(session.duration),
+          });
           // setDatesArray((datesArray) => [
           //   ...datesArray,
           //   session.date.toString(),
@@ -32,6 +43,7 @@ const SessionPlot = (props) => {
         // setDatesArray(dates);
         // setDurationsArray(durations);
         console.log("just before dates durations map");
+        console.log(sessionsForPlot);
         // console.log(datesArray.length);
         // datesArray.map((date, i) => {
         //   console.log(date);
@@ -52,6 +64,13 @@ const SessionPlot = (props) => {
       { x: 4, y: 25 },
       { x: 5, y: 18 },
     ];
+    // const lineData = [
+    //   { x: 1, y: 20, label: "Minutes" },
+    //   { x: 2, y: 20, label: "Minutes" },
+    //   { x: 3, y: 50, label: "Minutes" },
+    //   { x: 4, y: 25, label: "Minutes" },
+    //   { x: 5, y: 18, label: "Minutes" },
+    // ];
 
     return (
       <>

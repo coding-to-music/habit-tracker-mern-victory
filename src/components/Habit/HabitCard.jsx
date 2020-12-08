@@ -9,7 +9,7 @@ const HabitCard = (props) => (
     <p>{props.habit.description}</p>
 
     <div>
-      <Link to={`/habits/update/${props.habit._id}`}>edit</Link>|
+      {/* <Link to={`/habits/update/${props.habit._id}`}>edit</Link>|
       <a
         href="/vision"
         onClick={() => {
@@ -18,7 +18,7 @@ const HabitCard = (props) => (
       >
         delete
       </a>
-      |
+      | */}
       <Link
         to={{
           pathname: `/habits/${props.habit._id}`,

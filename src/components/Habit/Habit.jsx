@@ -10,7 +10,7 @@ const Habit = (props) => {
       <div>
         <Link to={`/habits/update/${props.habit._id}`}>edit</Link>|
         <a
-          href="/"
+          href="/vision"
           onClick={() => {
             props.deleteHabit(props.habit._id);
           }}

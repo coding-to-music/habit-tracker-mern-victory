@@ -25,12 +25,14 @@ const VisionBoard = (props) => {
   return (
     <div className="dash-board">
       <br />
+      <br />
       <h1>VisionBoard</h1>
       <br />
-      <br />
+
       <Link to="/habits/create" className="NavBar-link">
         Create Habit
       </Link>
+      <br />
       <br />
       <br />
       <HabitList user={props.user} />

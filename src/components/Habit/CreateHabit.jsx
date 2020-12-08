@@ -1,5 +1,7 @@
 import React from "react";
 import axios from "axios";
+// import { Route } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 class CreateHabit extends React.Component {
   constructor(props) {
@@ -39,7 +41,9 @@ class CreateHabit extends React.Component {
       .post("http://localhost:3001/api/habits/add", habit)
       .then((res) => console.log(res.data));
 
-    window.location = "/vision";
+    // this.props.location = "/vision";
+    // console.log(this.props);
+    this.props.history.push("/vision");
   }
   render() {
     return (
@@ -79,4 +83,5 @@ class CreateHabit extends React.Component {
   }
 }
 
-export default CreateHabit;
+// export default CreateHabit;
+export default withRouter(CreateHabit);
