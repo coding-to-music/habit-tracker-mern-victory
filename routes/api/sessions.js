@@ -6,7 +6,7 @@ router.get("/:id/getAll", (req, res) => {
   Habit.findById(req.params.id)
     .populate("sessions")
     .exec(function (err, habitwithsessions) {
-      if (!err && habitwithsessions.sessions.length > 0) {
+      if (!err && habitwithsessions && habitwithsessions.sessions.length > 0) {
         res.json(habitwithsessions.sessions);
       }
     });
