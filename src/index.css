@@ -67,15 +67,24 @@ code {
 
 .all-habit-cards-div {
   display: flex;
-
-  /* justify-content: space-between; */
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .card-flex {
   display: block;
+  margin-top: 10px;
+  position: relative;
 }
 .img-height {
-  width: 30%;
-  /* height: auto; */
-  /* max-height: 50%;  */
+  width: 100%;
+}
+
+.bottom-links {
+  position: absolute;
+  bottom: 0px;
+}
+
+.body-link-wrapper {
+  position: relative;
 }
