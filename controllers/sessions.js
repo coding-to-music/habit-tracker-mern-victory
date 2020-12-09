@@ -6,7 +6,7 @@ module.exports = {
   addSession,
 };
 
-async function getAllSessions(req, res) {
+function getAllSessions(req, res) {
   Habit.findById(req.params.id)
     .populate("sessions")
     .exec(function (err, habitwithsessions) {
