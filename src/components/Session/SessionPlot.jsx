@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import axios from "axios";
 import {
@@ -42,6 +42,9 @@ const SessionPlot = (props) => {
   const [sumDuration, setSumDuration] = useState(0);
   const [sumDurationAll, setSumDurationAll] = useState(0);
 
+  useEffect(() => {
+    fetchAllSessions();
+  }, []);
   const fetchAllSessions = () => {
     axios
       .get("http://localhost:3001/api/sessions/" + props.habitId + "/getAll")
@@ -69,7 +72,7 @@ const SessionPlot = (props) => {
       .catch((err) => console.log(err));
   };
 
-  const onClick = (e) => {
+  const handleBarPlot = (e) => {
     e.preventDefault();
 
     fetchAllSessions();
@@ -82,7 +85,7 @@ const SessionPlot = (props) => {
         type="submit"
         className="btn btn-primary"
         value="Plot Sessions"
-        onClick={onClick}
+        onClick={handleBarPlot}
       >
         Plot sessions
       </button>

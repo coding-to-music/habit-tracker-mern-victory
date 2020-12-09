@@ -6,7 +6,7 @@ const HabitCard = (props) => (
     <div>
       <div id="habit-image-div-card">
         <img id="habit-image-card" src={props.habit.imageURL} alt="" />
-        <div id="habit-on-image-card">
+        <div id="habit-on-image-cars">
           <p>
             <b>{props.habit.name}</b>
           </p>
@@ -15,16 +15,16 @@ const HabitCard = (props) => (
       </div>
 
       <div>
-        {/* <Link to={`/habits/update/${props.habit._id}`}>edit</Link>|
-      <a
-        href="/vision"
-        onClick={() => {
-          props.deleteHabit(props.habit._id);
-        }}
-      >
-        delete
-      </a>
-      | */}
+        <Link to={`/habits/update/${props.habit._id}`}>edit</Link>|
+        <a
+          href="/vision"
+          onClick={() => {
+            props.deleteHabit(props.habit._id);
+          }}
+        >
+          delete
+        </a>
+        |
         <Link
           to={{
             pathname: `/habits/${props.habit._id}`,

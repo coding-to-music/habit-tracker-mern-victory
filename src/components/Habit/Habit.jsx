@@ -30,7 +30,6 @@ const Habit = (props) => {
       <div id="habit-image-div">
         <img id="habit-image" src={props.habit.imageURL} alt="" />
         <div id="quote-on-image">
-          {" "}
           <FetchQuote />
         </div>
       </div>

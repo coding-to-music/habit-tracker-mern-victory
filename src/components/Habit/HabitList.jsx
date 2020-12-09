@@ -12,9 +12,7 @@ class HabitList extends React.Component {
   componentDidMount() {
     this.fetchAllHabits();
   }
-  componentDidUpdate() {
-    this.fetchAllHabits();
-  }
+
   fetchAllHabits() {
     axios
       .get("http://localhost:3001/api/habits", {
@@ -23,8 +21,8 @@ class HabitList extends React.Component {
         },
       })
       .then((res) => {
-        // console.log(res.data);
-        this.setState({ habits: res.data });
+        if (this.state.habits.length !== res.data.length)
+          this.setState({ habits: res.data });
       })
       .catch((err) => console.log(err));
   }
