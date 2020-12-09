@@ -8,7 +8,7 @@ const Habit = (props) => {
   console.log("Habit being executed ");
   return (
     <div className="habit">
-      <div>
+      {/* <div>
         <Link to={`/habits/update/${props.habit._id}`}>edit</Link>|
         <a
           href="/vision"
@@ -18,7 +18,7 @@ const Habit = (props) => {
         >
           delete
         </a>
-      </div>
+      </div> */}
 
       <br />
       <div id="habit-title">
@@ -34,6 +34,7 @@ const Habit = (props) => {
         </div>
       </div>
 
+      <br />
       <br />
       <br />
 

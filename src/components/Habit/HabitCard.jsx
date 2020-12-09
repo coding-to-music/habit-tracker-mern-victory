@@ -2,19 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const HabitCard = (props) => (
-  <div className="habit-card">
-    <div>
-      <div id="habit-image-div-card">
-        <img id="habit-image-card" src={props.habit.imageURL} alt="" />
-        <div id="habit-on-image-cars">
-          <p>
-            <b>{props.habit.name}</b>
-          </p>
-          <p>{props.habit.description}</p>
-        </div>
-      </div>
+  <div className="card bg-light card-size card-flex">
+    <img id="card-img img-height" src={props.habit.imageURL} alt="" />
 
-      <div>
+    <div id="card-img-overlay">
+      <p className="card-title">
+        <b>{props.habit.name}</b>
+      </p>
+      <p className="card-text">{props.habit.description}</p>
+
+      <div className="class-text">
         <Link to={`/habits/update/${props.habit._id}`}>edit</Link>|
         <a
           href="/vision"
@@ -38,7 +35,6 @@ const HabitCard = (props) => (
           Details
         </Link>
       </div>
-      <br />
     </div>
   </div>
 );

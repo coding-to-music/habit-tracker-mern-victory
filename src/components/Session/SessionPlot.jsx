@@ -90,13 +90,8 @@ const SessionPlot = (props) => {
         Plot sessions
       </button>
       <p>
-        You practised <b>{sumDuration}</b> minutes of
-        <b> {props.habitName}</b> this week
-      </p>
-      <p>
-        You have practised around <b>{Math.floor(sumDurationAll / 60)}</b> hours
-        of
-        <b> {props.habitName} </b> till now
+        This week: <b>{sumDuration}</b> minutes, In total:
+        <b> {Math.floor(sumDurationAll / 60)}</b> hours
       </p>
     </div>
   );

@@ -27,7 +27,6 @@ class HabitList extends React.Component {
       .catch((err) => console.log(err));
   }
   deleteHabit(id) {
-    // console.log("inside delete" + id);
     axios
       .delete("/api/habits/" + id, {
         headers: {
@@ -52,7 +51,7 @@ class HabitList extends React.Component {
   render() {
     return (
       <div className="habit">
-        <div>{this.habitsList()}</div>
+        <div className="all-habit-cards-div">{this.habitsList()}</div>
       </div>
     );
   }
