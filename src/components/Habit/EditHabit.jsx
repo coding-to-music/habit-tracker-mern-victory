@@ -6,6 +6,7 @@ class EditHabit extends React.Component {
     super(props);
     this.onChangeDescription = this.onChangeDescription.bind(this);
     this.onChangeHname = this.onChangeHname.bind(this);
+    this.onChangeImageURL = this.onChangeImageURL.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.state = {
       hname: "",
