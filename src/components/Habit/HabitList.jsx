@@ -10,6 +10,12 @@ class HabitList extends React.Component {
     this.user = props.user;
   }
   componentDidMount() {
+    this.fetchAllHabits();
+  }
+  componentDidUpdate() {
+    this.fetchAllHabits();
+  }
+  fetchAllHabits() {
     axios
       .get("http://localhost:3001/api/habits", {
         headers: {

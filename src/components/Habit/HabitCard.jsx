@@ -2,14 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const HabitCard = (props) => (
-  <div className="habit">
-    <p>
-      <b>{props.habit.name}</b>
-    </p>
-    <p>{props.habit.description}</p>
-
+  <div className="habit-card">
     <div>
-      <Link to={`/habits/update/${props.habit._id}`}>edit</Link>|
+      <div id="habit-image-div-card">
+        <img id="habit-image-card" src={props.habit.imageURL} alt="" />
+        <div id="habit-on-image-card">
+          <p>
+            <b>{props.habit.name}</b>
+          </p>
+          <p>{props.habit.description}</p>
+        </div>
+      </div>
+
+      <div>
+        {/* <Link to={`/habits/update/${props.habit._id}`}>edit</Link>|
       <a
         href="/vision"
         onClick={() => {
@@ -18,21 +24,22 @@ const HabitCard = (props) => (
       >
         delete
       </a>
-      |
-      <Link
-        to={{
-          pathname: `/habits/${props.habit._id}`,
-          params: {
-            habit: props.habit,
-            deleteHabit: props.deleteHabit,
-            user: props.user,
-          },
-        }}
-      >
-        Details
-      </Link>
+      | */}
+        <Link
+          to={{
+            pathname: `/habits/${props.habit._id}`,
+            params: {
+              habit: props.habit,
+              deleteHabit: props.deleteHabit,
+              user: props.user,
+            },
+          }}
+        >
+          Details
+        </Link>
+      </div>
+      <br />
     </div>
-    <br />
   </div>
 );
 

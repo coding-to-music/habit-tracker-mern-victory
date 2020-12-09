@@ -36,3 +36,42 @@ code {
   display: flex;
   justify-content: flex-end;
 }
+#habit-title {
+  text-align: center;
+}
+
+#habit-image {
+  width: 1100px;
+  height: auto;
+  opacity: 0.7;
+}
+#habit-image:hover {
+  opacity: 1;
+}
+#habit-image-div {
+  position: relative;
+  text-align: center;
+}
+
+#quote-on-image {
+  position: absolute;
+  top: 20px;
+  left: 100px;
+}
+
+#habit-card {
+}
+#habit-image-div-card {
+  position: relative;
+  text-align: center;
+}
+#habit-image-card {
+  width: 100px;
+  height: auto;
+  opacity: 0.7;
+}
+#habit-on-image-card {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}

@@ -10,6 +10,7 @@ class EditHabit extends React.Component {
     this.state = {
       hname: "",
       description: "",
+      imageURL: "",
     };
   }
   componentDidMount() {
@@ -18,6 +19,7 @@ class EditHabit extends React.Component {
       this.setState({
         hname: res.data.name,
         description: res.data.description,
+        imageURL: res.data.imageURL,
       });
       console.log(res.data);
     });
@@ -34,11 +36,18 @@ class EditHabit extends React.Component {
     });
   }
 
+  onChangeImageURL(e) {
+    this.setState({
+      imageURL: e.target.value,
+    });
+  }
+
   onSubmit(e) {
     e.preventDefault();
     const habit = {
       description: this.state.description,
       hname: this.state.hname,
+      imageURL: this.state.imageURL,
       token: localStorage.getItem("token"),
     };
     // console.log(habit);
@@ -73,6 +82,18 @@ class EditHabit extends React.Component {
               className="form-control"
               defaultValue={this.state.description}
               onChange={this.onChangeDescription}
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Habit imageURL:</label>
+            <input
+              type="text"
+              className="form-control"
+              pattern="https://.*"
+              placeholder="https://"
+              defaultValue={this.state.imageURL}
+              onChange={this.onChangeImageURL}
             />
           </div>
 

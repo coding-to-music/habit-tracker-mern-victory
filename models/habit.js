@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+require("mongoose-type-url");
 const Schema = mongoose.Schema;
 const sessionSchema = new Schema(
   {
@@ -18,9 +19,9 @@ const habitSchema = new Schema(
   {
     name: { type: String },
     description: { type: String },
-    // imageURL: {
-    //   type: mongoose.SchemaTypes.Url,
-    // },
+    imageURL: {
+      type: mongoose.SchemaTypes.Url,
+    },
     sessions: { type: [sessionSchema] },
   },
   { timestamps: true }

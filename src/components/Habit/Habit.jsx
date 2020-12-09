@@ -21,12 +21,22 @@ const Habit = (props) => {
       </div>
 
       <br />
+      <div id="habit-title">
+        <h1> {props.habit.name}</h1>
+        <h4>{props.habit.description}</h4>
+      </div>
+
       <br />
-      <p> {props.habit.name}</p>
-      <p>Affirmation: {props.habit.description}</p>
+      <div id="habit-image-div">
+        <img id="habit-image" src={props.habit.imageURL} alt="" />
+        <div id="quote-on-image">
+          {" "}
+          <FetchQuote />
+        </div>
+      </div>
+
       <br />
       <br />
-      <FetchQuote />
 
       <div id="sessiondiv">
         <SessionPlot habitId={props.habit._id} habitName={props.habit.name} />

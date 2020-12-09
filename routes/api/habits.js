@@ -13,9 +13,11 @@ router.get("/", auth, (req, res) => {
 router.post("/add", auth, (req, res) => {
   const name = req.body.hname;
   const description = req.body.description;
+  const imageURL = req.body.imageURL;
   const newHabit = new Habit({
     name,
     description,
+    imageURL,
   });
   newHabit.save(function (err, habit) {
     User.findById(req.user._id)
@@ -47,6 +49,7 @@ router.post("/update/:id", auth, (req, res) => {
     .then((habit) => {
       habit.name = req.body.hname;
       habit.description = req.body.description;
+      habit.imageURL = req.body.imageURL;
       habit
         .save()
         .then(() => res.json("habit updated"))
