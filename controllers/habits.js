@@ -10,7 +10,7 @@ module.exports = {
   updateHabit,
 };
 
-async function getAllHabits(req, res) {
+function getAllHabits(req, res) {
   User.findById(req.user._id)
     .populate("habits")
     .exec(function (err, userwithhabits) {

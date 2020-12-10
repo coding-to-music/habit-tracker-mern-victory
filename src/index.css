@@ -16,11 +16,18 @@ code {
   width: 600px;
   height: auto;
 }
-
-#pie {
+.pies-div {
+  display: flex;
+  justify-content: space-around;
+  height: 600px;
+}
+.pie {
   width: auto;
-  height: 500px;
-  margin: 50px;
+  height: 600px;
+  padding: 50px;
+}
+.bar {
+  fill: "gold";
 }
 
 #calendar {
@@ -62,7 +69,6 @@ code {
 .card-size {
   max-width: 18rem;
   width: 30%;
-  /* height: */
 }
 
 .all-habit-cards-div {

@@ -11,15 +11,28 @@ import {
 
 const ChartComponent = (props) => {
   const lineData = props.sessionData;
+  // const getRandomColor = () => {
+  //   var letters = "0123456789ABCDEF".split("");
+  //   var color = "#";
+  //   for (var i = 0; i < 6; i++) {
+  //     color += letters[Math.floor(Math.random() * 16)];
+  //   }
+  //   console.log(color);
+  //   return color;
+  // };
 
   return (
     <>
       <div id="graph">
         {/* <VictoryChart theme={VictoryTheme.material}> */}
+
         <VictoryBar
           interpolation="natural"
           style={{
-            data: { stroke: "green" },
+            data: {
+              stroke: "green",
+              fill: "#" + (Math.random().toString(16) + "0000000").slice(2, 8),
+            },
           }}
           data={lineData}
           labels={({ datum }) => datum.y}

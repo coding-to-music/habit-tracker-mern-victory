@@ -4,13 +4,11 @@ import { VictoryPie } from "victory";
 
 const ChartComponent = () => {
   const [piesDataForPlot, setPiesDataForPlot] = useState([]);
+  const [trackedPie, setTrackedPie] = useState([]);
 
-  const pieData = [
-    { x: "Meditation", y: 15 },
-    { x: "Reading", y: 30 },
-    { x: "Walking", y: 20 },
-    { x: "Un-tracked", y: 35 },
-  ];
+  const [colorScaleOne, setColorScaleOne] = useState([]);
+  const [colorScaleTwo, setColorScaleTwo] = useState([]);
+
   const fetchHabitsAndSessionsData = () => {
     axios
       .get("http://localhost:3001/api/habits", {
@@ -23,6 +21,7 @@ const ChartComponent = () => {
         const piesForPlot = [];
         let sumSessionDuration = 0;
         let sumAllSessionsDuration = 0;
+        const minutesInWeek = 24 * 7 * 60;
         const piesData = [];
         let sessions = [];
         habitsAndSessions.forEach((habit) => {
@@ -41,11 +40,33 @@ const ChartComponent = () => {
             y: sumSessionDuration,
           });
         });
+        const colorsOne = [];
 
         piesForPlot.forEach((pie) => {
           pie.y = Math.floor((pie.y / sumAllSessionsDuration) * 100);
+          colorsOne.push(
+            "#" + (Math.random().toString(16) + "0000000").slice(2, 8)
+          );
         });
         setPiesDataForPlot(piesForPlot);
+        setColorScaleOne(colorsOne);
+        setTrackedPie([
+          {
+            x: "Tracked",
+            y: Math.floor((sumAllSessionsDuration / minutesInWeek) * 100),
+          },
+          {
+            x: "Un-tracked",
+            y: Math.floor(
+              ((minutesInWeek - sumAllSessionsDuration) / minutesInWeek) * 100
+            ),
+          },
+        ]);
+        setColorScaleTwo([
+          "#" + (Math.random().toString(16) + "0000000").slice(2, 8),
+          "#" + (Math.random().toString(16) + "0000000").slice(2, 8),
+        ]);
+        console.log(colorScaleTwo);
       })
       .catch((err) => console.log(err));
   };
@@ -55,11 +76,13 @@ const ChartComponent = () => {
 
   return (
     <>
-      <div id="pie">
-        <VictoryPie
-          data={piesDataForPlot}
-          colorScale={["tomato", "gold", "navy", "green"]}
-        />
+      <div className="pies-div">
+        <div className="pie">
+          <VictoryPie data={piesDataForPlot} colorScale={colorScaleOne} />
+        </div>
+        <div className="pie">
+          <VictoryPie data={trackedPie} colorScale={colorScaleTwo} />
+        </div>
       </div>
     </>
   );
