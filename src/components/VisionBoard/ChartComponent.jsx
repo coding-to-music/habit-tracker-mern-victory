@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { VictoryPie } from "victory";
+import { VictoryPie, VictoryBar } from "victory";
 
 const ChartComponent = () => {
   const [piesDataForPlot, setPiesDataForPlot] = useState([]);
@@ -80,7 +80,8 @@ const ChartComponent = () => {
         <div className="pie">
           <VictoryPie data={piesDataForPlot} colorScale={colorScaleOne} />
         </div>
-        <div className="pie">
+
+        <div className="pie2">
           <VictoryPie data={trackedPie} colorScale={colorScaleTwo} />
         </div>
       </div>

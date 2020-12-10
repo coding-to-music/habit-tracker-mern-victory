@@ -12,6 +12,8 @@ function getAllSessions(req, res) {
     .exec(function (err, habitwithsessions) {
       if (!err && habitwithsessions && habitwithsessions.sessions.length > 0) {
         res.json(habitwithsessions.sessions);
+      } else {
+        res.send("response");
       }
     });
 }
