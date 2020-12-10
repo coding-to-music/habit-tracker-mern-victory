@@ -56,8 +56,9 @@ class CreateHabit extends React.Component {
   render() {
     return (
       <div className="habit">
-        <h1>Create New Habit</h1>
         <form onSubmit={this.onSubmit}>
+          <br />
+          <br />
           <div className="form-group">
             <label>Habit Name:</label>
             <input
@@ -69,7 +70,7 @@ class CreateHabit extends React.Component {
           </div>
 
           <div className="form-group">
-            <label>Habit Affirmation:</label>
+            <label>Affirmation:</label>
             <input
               type="text"
               className="form-control"
@@ -79,7 +80,7 @@ class CreateHabit extends React.Component {
           </div>
 
           <div className="form-group">
-            <label>Habit imageURL:</label>
+            <label>Image URL:</label>
             <input
               type="text"
               className="form-control"

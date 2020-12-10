@@ -4,9 +4,9 @@ import "./NavBar.css";
 
 const NavBar = (props) => {
   let nav = props.user ? (
-    <div className="navbar navbar-dark bg-dark navbar-expand-lg">
+    <div className="navbar navbar-dark bg-dark navbar-expand-lg nav-font">
       <Link to="" className="nav-link">
-        HOME
+        <img src="/Vision2.png" alt="" height="50px" title="Home" />
       </Link>
       |
       <Link to="/vision" className="nav-link">
@@ -20,7 +20,7 @@ const NavBar = (props) => {
       <span className="nav-link navbar-brand">WELCOME, {props.user.name}</span>
     </div>
   ) : (
-    <div className="navbar navbar-dark bg-dark navbar-expand-lg">
+    <div className="navbar navbar-dark bg-dark navbar-expand-lg nav-font">
       <Link to="/login" className="nav-link">
         LOG IN
       </Link>

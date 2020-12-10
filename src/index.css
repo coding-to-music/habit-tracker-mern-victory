@@ -12,6 +12,11 @@ code {
     monospace;
 }
 
+.nav-font {
+  font-size: 30px;
+  padding: 30px;
+}
+
 #graph {
   width: 600px;
   height: auto;
@@ -86,6 +91,11 @@ code {
   width: 30%;
 }
 
+.card-footer-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
 .all-habit-cards-div {
   display: flex;
   justify-content: space-between;
@@ -93,7 +103,7 @@ code {
 }
 
 .card-flex {
-  margin-top: 10px;
+  margin-top: 20px;
   position: relative;
 }
 .img-height {
@@ -113,6 +123,16 @@ code {
   height: 100%;
   position: relative;
 }
+.home-page-text {
+  position: absolute;
+  top: 10px;
+  left: 250px;
+  z-index: 10;
+}
+.home-page-text h1 {
+  font-size: 50px;
+}
+
 .home-page-div img {
   position: absolute;
   top: 0;
@@ -121,6 +141,7 @@ code {
   height: 700px;
   display: block;
 }
+
 .home-page-div .first {
   animation: fadeOut 3s ease-in-out;
   animation-fill-mode: forwards;
@@ -154,4 +175,16 @@ code {
   100% {
     opacity: 0;
   }
+}
+
+#add-habit-link {
+  float: right;
+}
+
+.signup-form {
+  margin-top: 150px;
+}
+
+.signup-form-text {
+  text-align: center;
 }

@@ -39,8 +39,12 @@ class SignupForm extends Component {
 
   render() {
     return (
-      <div>
-        <header className="header-footer">Sign Up</header>
+      <div className="signup-form">
+        <header className="signup-form-text">
+          <h1>Sign Up</h1>
+        </header>
+        <br />
+        <br />
         <form className="form-horizontal" onSubmit={this.handleSubmit}>
           <div className="form-group">
             <div className="col-sm-12">
@@ -48,6 +52,7 @@ class SignupForm extends Component {
                 type="text"
                 className="form-control"
                 placeholder="Name"
+                autocomplete="off"
                 value={this.state.name}
                 name="name"
                 onChange={this.handleChange}
@@ -60,6 +65,7 @@ class SignupForm extends Component {
                 type="email"
                 className="form-control"
                 placeholder="Email"
+                autocomplete="off"
                 value={this.state.email}
                 name="email"
                 onChange={this.handleChange}
@@ -72,6 +78,7 @@ class SignupForm extends Component {
                 type="password"
                 className="form-control"
                 placeholder="Password"
+                autocomplete="off"
                 value={this.state.password}
                 name="password"
                 onChange={this.handleChange}
@@ -84,6 +91,7 @@ class SignupForm extends Component {
                 type="password"
                 className="form-control"
                 placeholder="Confirm Password"
+                autocomplete="off"
                 value={this.state.passwordConf}
                 name="passwordConf"
                 onChange={this.handleChange}

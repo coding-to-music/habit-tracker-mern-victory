@@ -10,11 +10,10 @@ const HabitCard = (props) => (
       </p>
       <p className="card-text">{props.habit.description}</p>
     </div>
-    <div className="class-text card-footer ">
+    <div className="class-text card-footer card-footer-icons">
       <Link className="card-link" to={`/habits/update/${props.habit._id}`}>
-        edit
+        <img src="./editVision.png" alt="" width="30px" title="Edit" />
       </Link>
-      |
       <a
         href="/vision"
         className="card-link"
@@ -22,9 +21,9 @@ const HabitCard = (props) => (
           props.deleteHabit(props.habit._id);
         }}
       >
-        delete
+        <img src="./deleteVision.svg" alt="" title="Delete" width="30px" />
       </a>
-      |
+
       <Link
         className="card-link"
         to={{
@@ -36,7 +35,7 @@ const HabitCard = (props) => (
           },
         }}
       >
-        Details
+        <img src="./detailsVision.png" alt="" title="Details" width="30px" />
       </Link>
     </div>
   </div>

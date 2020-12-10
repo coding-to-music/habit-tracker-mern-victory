@@ -9,10 +9,8 @@ const VisionBoard = (props) => {
     <div className="dash-board">
       <br />
       <br />
-      <h1>VisionBoard</h1>
-      <br />
-      <Link to="/habits/create" className="NavBar-link">
-        Create Habit
+      <Link to="/habits/create" id="add-habit-link">
+        <img src="./addVision.png" alt="" height="30px" title="Add" />
       </Link>
       <br />
       <br />

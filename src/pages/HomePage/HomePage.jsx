@@ -6,17 +6,14 @@ const HomePage = (props) => {
   return (
     <div className="HomePage">
       <NavBar user={props.user} handleLogout={props.handleLogout} />
-      <br />
-      <br />
-      <h1>Habit Tracker</h1>
-      <br />
-      <br />
-      <p>Create your vision board and start tracking your habits!</p>
-      <p>
-        Dont' forget to include encouraging affirmations. Self-affirmation
-        directs you to think positively about the important habits in your life.
-      </p>
-      <div className="home-page-div">
+
+      <div className="home-page-div home-page-images">
+        <div className="home-page-text">
+          <br />
+          <br />
+          <h1>Time to create Vision 2021..!!!</h1>
+          <br />
+        </div>
         <img src="./images/cleaning.jpeg" alt="" className="first" />
         <img src="./images/eating.jpg" alt="" className="second" />
         <img src="./images/praying.jpg" alt="" className="third" />
