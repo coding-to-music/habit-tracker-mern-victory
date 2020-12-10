@@ -11,6 +11,7 @@ const Session = (props) => {
   const [duration, setDuration] = useState("0");
   const onChangeDate = (date) => {
     setDate(date);
+    console.log("selected date is ", date.toDateString());
   };
   const onChangeDuration = (event) => {
     setDuration(event.target.value);
@@ -40,7 +41,12 @@ const Session = (props) => {
       <p>session Duration: {parseInt(duration)}</p>
 
       <form onSubmit={onSubmit} ref={formRef}>
-        <Calendar onChange={onChangeDate} value={date} id="calendar" />
+        <Calendar
+          onChange={onChangeDate}
+          type="date"
+          value={date}
+          id="calendar"
+        />
 
         <div className="form-group">
           <label>Habit Duration:</label>

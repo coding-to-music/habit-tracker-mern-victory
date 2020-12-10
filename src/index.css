@@ -13,8 +13,8 @@ code {
 }
 
 .nav-font {
-  font-size: 30px;
-  padding: 30px;
+  font-size: 25px;
+  padding: 25px;
 }
 
 #graph {
@@ -125,9 +125,12 @@ code {
 }
 .home-page-text {
   position: absolute;
-  top: 10px;
-  left: 250px;
+  background: rgba(245, 242, 242, 0.199);
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 10;
+  text-align: center;
 }
 .home-page-text h1 {
   font-size: 50px;
@@ -143,12 +146,12 @@ code {
 }
 
 .home-page-div .first {
-  animation: fadeOut 3s ease-in-out;
+  animation: fadeOut 2s ease-in-out;
   animation-fill-mode: forwards;
   z-index: 5;
 }
 .home-page-div .second {
-  animation: fadeOut 3s ease-in-out;
+  animation: fadeOut 2s ease-in-out;
   animation-fill-mode: forwards;
   animation-delay: 6s;
   z-index: 4;
@@ -167,6 +170,7 @@ code {
 }
 .home-page-div .fifth {
   z-index: 1;
+  position: relative;
 }
 @keyframes fadeOut {
   0% {
@@ -187,4 +191,12 @@ code {
 
 .signup-form-text {
   text-align: center;
+}
+
+.calendar-div {
+  margin-left: 20px;
+}
+
+.bar-div {
+  margin-right: 20px;
 }

@@ -78,11 +78,19 @@ const ChartComponent = () => {
     <>
       <div className="pies-div">
         <div className="pie">
-          <VictoryPie data={piesDataForPlot} colorScale={colorScaleOne} />
+          <VictoryPie
+            data={piesDataForPlot}
+            colorScale={colorScaleOne}
+            labels={({ datum }) => `${datum.x}:\n${datum.y}%`}
+          />
         </div>
 
         <div className="pie2">
-          <VictoryPie data={trackedPie} colorScale={colorScaleTwo} />
+          <VictoryPie
+            data={trackedPie}
+            colorScale={colorScaleTwo}
+            labels={({ datum }) => `${datum.x}:\n${datum.y}%`}
+          />
         </div>
       </div>
     </>

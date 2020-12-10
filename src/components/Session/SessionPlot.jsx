@@ -7,38 +7,41 @@ import {
   VictoryLine,
   VictoryLabel,
   VictoryBar,
+  VictoryContainer,
+  VictoryAxis,
 } from "victory";
 
 const ChartComponent = (props) => {
   const lineData = props.sessionData;
-  // const getRandomColor = () => {
-  //   var letters = "0123456789ABCDEF".split("");
-  //   var color = "#";
-  //   for (var i = 0; i < 6; i++) {
-  //     color += letters[Math.floor(Math.random() * 16)];
-  //   }
-  //   console.log(color);
-  //   return color;
-  // };
 
   return (
     <>
       <div id="graph">
-        {/* <VictoryChart theme={VictoryTheme.material}> */}
-
-        <VictoryBar
-          interpolation="natural"
-          style={{
-            data: {
-              stroke: "green",
-              fill: "#" + (Math.random().toString(16) + "0000000").slice(2, 8),
-            },
-          }}
-          data={lineData}
-          labels={({ datum }) => datum.y}
-          labelComponent={<VictoryLabel renderInPortal dy={-20} />}
-        />
-        {/* </VictoryChart> */}
+        <VictoryChart theme={VictoryTheme.material}>
+          <VictoryAxis
+            dependentAxis={true}
+            style={{
+              grid: { stroke: "grey" },
+            }}
+          />
+          <VictoryAxis tickFormat={(x) => ``} />
+          <VictoryBar
+            interpolation="natural"
+            style={{
+              data: {
+                stroke: "green",
+                fill:
+                  "#" + (Math.random().toString(16) + "0000000").slice(2, 8),
+              },
+            }}
+            data={lineData}
+            scale={{ x: "time", y: "linear" }}
+            labels={({ datum }) => datum.x}
+            labelComponent={
+              <VictoryLabel y={310} verticalAnchor={"start"} angle={-45} />
+            }
+          />
+        </VictoryChart>
       </div>
     </>
   );
@@ -68,8 +71,12 @@ const SessionPlot = (props) => {
         let sumAll = 0;
         const sessions = sessionsAll.slice(Math.max(sessionsAll.length - 7, 0));
         sessions.forEach((session) => {
+          console.log(
+            "session date type is, ",
+            new Date(session.date).toDateString()
+          );
           sessionsForPlot.push({
-            x: session.date.toString(),
+            x: new Date(session.date).toDateString(),
             y: parseInt(session.duration),
           });
           sum = sum + parseInt(session.duration);
@@ -103,7 +110,7 @@ const SessionPlot = (props) => {
         Plot sessions
       </button>
       <p>
-        This week: <b>{sumDuration}</b> minutes, In total:
+        This week: <b>{sumDuration}</b> minutes, Total So far:
         <b> {Math.floor(sumDurationAll / 60)}</b> hours
       </p>
     </div>

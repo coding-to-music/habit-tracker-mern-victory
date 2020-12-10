@@ -36,11 +36,15 @@ const Habit = (props) => {
 
       <br />
       <br />
-      <br />
 
       <div id="sessiondiv">
-        <SessionPlot habitId={props.habit._id} habitName={props.habit.name} />
-        <Session habitId={props.habit._id} />
+        <div className="bar-div">
+          <SessionPlot habitId={props.habit._id} habitName={props.habit.name} />
+        </div>
+
+        <div className="calendar-div">
+          <Session habitId={props.habit._id} />
+        </div>
       </div>
     </div>
   );
