@@ -153,19 +153,19 @@ code {
 .home-page-div .second {
   animation: fadeOut 2s ease-in-out;
   animation-fill-mode: forwards;
-  animation-delay: 6s;
+  animation-delay: 4s;
   z-index: 4;
 }
 .home-page-div .third {
-  animation: fadeOut 3s ease-in-out;
+  animation: fadeOut 2s ease-in-out;
   animation-fill-mode: forwards;
-  animation-delay: 9s;
+  animation-delay: 6s;
   z-index: 3;
 }
 .home-page-div .fourth {
-  animation: fadeOut 3s ease-in-out;
+  animation: fadeOut 2s ease-in-out;
   animation-fill-mode: forwards;
-  animation-delay: 12s;
+  animation-delay: 8s;
   z-index: 2;
 }
 .home-page-div .fifth {

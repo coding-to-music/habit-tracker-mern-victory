@@ -14,9 +14,9 @@ const HomePage = (props) => {
           <h1>Time to create Vision 2021..!!!</h1>
           <br />
         </div>
-        <img src="./images/sunrise.jpeg" alt="" className="first" />
-        <img src="./images/suntree.jpg" alt="" className="second" />
-        <img src="./images/eating.jpg" alt="" className="third" />
+        <img src="./images/sunset.jpg" alt="" className="first" />
+        <img src="./images/sunrises.jpg" alt="" className="second" />
+        <img src="./images/snowsun.jpg" alt="" className="third" />
         <img src="./images/praying.jpg" alt="" className="fourth" />
         <img src="./images/reading.jpg" alt="" className="fifth" />
       </div>
