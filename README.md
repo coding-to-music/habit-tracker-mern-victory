@@ -16,10 +16,10 @@ Enjoy!
 ![Vision Board](./public/images/vision_board.png)
 
 #### Duration to practice each habit:
-![Bar Chart](./public/images/pie_chart.png)
+![Bar Chart](./public/images/bar_chart.png)
 
 #### Percentage time for each habit:
-![Pie Chart](.public/images/bar_chart.png)
+![Pie Chart](.public/images/pie_chart.png)
 
 #### Quotes for more motivation:
 ![Quote](.public/images/quote.png)
