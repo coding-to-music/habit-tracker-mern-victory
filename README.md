@@ -1,5 +1,5 @@
 
-# Vision-Habit Tracking App
+# Vision: Habit Tracking App
 <br/>
 <br/>
 
@@ -10,16 +10,19 @@ Enjoy!
 ## Screenshots:
 
 #### Home Page:
-![Game start screen](Images/game_start.png)
+![Home Page](Images/home_page.png)
 
 #### Vision Board:
-![Two players playing game, one reached at ladder top](Images/player_ladder.png)
+![Vision Board](Images/vision_board.png)
+
+#### Duration to practice each habit:
+![Bar Chart](Images/pie_chart.png)
 
 #### Percentage time for each habit:
-![Two players playing game, one at snake dropped at snake tail](Images/player_snake.png)
+![Pie Chart](Images/bar_chart.png)
 
 #### Quotes for more motivation:
-![Winner declared](Images/winner.png)
+![Quote](Images/quote.png)
 
 ## Technologies Used: 
 React, NodeJS, Express, React Calendar for dates/times, React-Vector for charts, Quotes APIs, Bootstrap, Postman, Mongo Atlas, Heroku
