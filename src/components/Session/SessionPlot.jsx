@@ -107,7 +107,7 @@ const SessionPlot = (props) => {
         value="Plot Sessions"
         onClick={handleBarPlot}
       >
-        Plot sessions
+        View Sessions
       </button>
       <h4>
         This week: <b>{sumDuration}</b> minutes, Total around
