@@ -29,8 +29,8 @@ React, NodeJS, Express, React Calendar for dates/times, React-Vector for charts,
 
 ## Repo Links:
 
-### github: https://mrskamran.github.io/SnakesAndLadders/
-### heroku: https://mrskamran.github.io/SnakesAndLadders/
+### github: https://github.com/MrsKamran/habit-tracker
+### heroku: https://habit-tracker-dec2020.herokuapp.com/
 
 ### Instructions:
 
