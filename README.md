@@ -1,71 +1,49 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Vision-Habit Tracking App
+<br/>
+<br/>
 
-## Available Scripts
+2021 is going to start soon. It is a great idea to make vision board for new year, make new habits, resolutions, affirmations and manage time to practise those habits. This app provides you a simple interface where you can login and start your own vision board. You can add new habits with affirmations and inspiring photos which can be updated later on. To each habit you can add new sessions every time you pratice and see your progress in bar chart. Each habit displays a randomly fetched quote for further inspiration. On vision board you can also see how much time you are giving to pratise each habit and how much time of the day is being tracked.
 
-In the project directory, you can run:
+Enjoy!
 
-### `npm start`
+## Screenshots:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Home Page:
+![Game start screen](Images/game_start.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Vision Board:
+![Two players playing game, one reached at ladder top](Images/player_ladder.png)
 
-### `npm test`
+#### Percentage time for each habit:
+![Two players playing game, one at snake dropped at snake tail](Images/player_snake.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Quotes for more motivation:
+![Winner declared](Images/winner.png)
 
-### `npm run build`
+## Technologies Used: 
+React, NodeJS, Express, React Calendar for dates/times, React-Vector for charts, Quotes APIs, Bootstrap, Postman, Mongo Atlas, Heroku
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Repo Links:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### github: https://mrskamran.github.io/SnakesAndLadders/
+### heroku: https://mrskamran.github.io/SnakesAndLadders/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Instructions:
 
-### `npm run eject`
+Sign up and log in to the app. Click on vision board and then add habit icon. 
+Once form is filled, habit card is generated on vision board where you can edit, delete or view the details of habit. 
+Once you click on habit page you'll find your affirmation along with the quote.
+You can click on calendar to choose a date when you practise that habit and enter duration in minutes. Then click on view sessions button and you can view the last seven sessions along with their duration.
+When you go back to vision board, you'll find all the habits being tracked along with their relative percentage calculated from last seven sessions' record assuming a week with one session every day. You will also observe how much time is being tracked in the app.
+<br/>
+## Planned Future Enhancements:
+Following are some enhancements in line:
+<ul>
+  <li>Implement Image uplaod API.</li>
+  <li>Timer to practice habits</li>
+  <li> Video upload for guided meditations or exercises</li>
+</ul>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# habit-tracker
