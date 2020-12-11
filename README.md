@@ -19,10 +19,10 @@ Enjoy!
 ![Bar Chart](./public/images/bar_chart.png)
 
 #### Percentage time for each habit:
-![Pie Chart](.public/images/pie_chart.png)
+![Pie Chart](./public/images/pie_chart.png)
 
 #### Quotes for more motivation:
-![Quote](.public/images/quote.png)
+![Quote](./public/images/quote.png)
 
 ## Technologies Used: 
 React, NodeJS, Express, React Calendar for dates/times, React-Vector for charts, Quotes APIs, Bootstrap, Postman, Mongo Atlas, Heroku
