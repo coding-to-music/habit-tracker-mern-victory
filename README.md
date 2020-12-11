@@ -10,19 +10,19 @@ Enjoy!
 ## Screenshots:
 
 #### Home Page:
-![Home Page](images/home_page.png)
+![Home Page](./images/home_page.png)
 
 #### Vision Board:
-![Vision Board](images/vision_board.png)
+![Vision Board](./images/vision_board.png)
 
 #### Duration to practice each habit:
-![Bar Chart](images/pie_chart.png)
+![Bar Chart](./images/pie_chart.png)
 
 #### Percentage time for each habit:
-![Pie Chart](images/bar_chart.png)
+![Pie Chart](./images/bar_chart.png)
 
 #### Quotes for more motivation:
-![Quote](images/quote.png)
+![Quote](./images/quote.png)
 
 ## Technologies Used: 
 React, NodeJS, Express, React Calendar for dates/times, React-Vector for charts, Quotes APIs, Bootstrap, Postman, Mongo Atlas, Heroku
