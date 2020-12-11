@@ -8,18 +8,6 @@ const Habit = (props) => {
   console.log("Habit being executed ");
   return (
     <div className="habit">
-      {/* <div>
-        <Link to={`/habits/update/${props.habit._id}`}>edit</Link>|
-        <a
-          href="/vision"
-          onClick={() => {
-            props.deleteHabit(props.habit._id);
-          }}
-        >
-          delete
-        </a>
-      </div> */}
-
       <br />
       <div id="habit-title">
         <h1> {props.habit.name}</h1>

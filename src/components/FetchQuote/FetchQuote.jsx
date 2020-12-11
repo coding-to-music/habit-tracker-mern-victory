@@ -8,6 +8,7 @@ function FetchQuote() {
 
   useEffect(() => {
     fetchQuote();
+    //This commented code was another API that provides 1 image per day, keeping it here for my reference
     // const intervalID = setInterval(() => {
     //   fetchQuote();
     // }, 0.5 * 60 * 60 * 1000);

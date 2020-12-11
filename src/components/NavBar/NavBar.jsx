@@ -17,9 +17,7 @@ const NavBar = (props) => {
         LOG OUT
       </Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-      <span className="nav-link navbar-brand nav-font">
-        WELCOME, {props.user.name}
-      </span>
+      <span className="nav-link navbar-brand nav-font">{props.user.name}</span>
     </div>
   ) : (
     <div className="navbar navbar-dark bg-dark navbar-expand-lg nav-font">

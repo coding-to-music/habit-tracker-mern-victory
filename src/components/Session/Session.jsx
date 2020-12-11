@@ -30,8 +30,7 @@ const Session = (props) => {
         "http://localhost:3001/api/sessions/" + props.habitId + "/addsession",
         session
       )
-      .then((res) => console.log()); //(res.data)
-    // history.push("");
+      .then((res) => console.log());
   };
 
   return (

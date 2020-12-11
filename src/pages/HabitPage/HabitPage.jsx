@@ -6,8 +6,6 @@ import Habit from "../../components/Habit/Habit";
 
 const HabitPage = (props) => {
   const history = useHistory();
-  // console.log(history.location);
-
   return (
     <div className="HabitPage">
       <NavBar user={props.user} handleLogout={props.handleLogout} />
