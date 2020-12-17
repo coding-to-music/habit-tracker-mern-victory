@@ -15,7 +15,7 @@ class HabitList extends React.Component {
 
   fetchAllHabits() {
     axios
-      .get("http://localhost:3001/api/habits", {
+      .get("/api/habits", {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },

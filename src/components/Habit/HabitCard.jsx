@@ -23,6 +23,14 @@ const HabitCard = (props) => (
       >
         <img src="./deleteVision.svg" alt="" title="Delete" width="30px" />
       </a>
+      {/* <Link
+        className="card-link"
+        onClick={() => {
+          props.deleteHabit(props.habit._id);
+        }}
+      >
+        <img src="./deleteVision.svg" alt="" title="Delete" width="30px" />
+      </Link> */}
 
       <Link
         className="card-link"
