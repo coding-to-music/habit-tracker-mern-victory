@@ -11,7 +11,7 @@ const ChartComponent = () => {
 
   const fetchHabitsAndSessionsData = () => {
     axios
-      .get("http://localhost:3001/api/habits", {
+      .get("/api/habits", {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
