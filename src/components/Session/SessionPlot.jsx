@@ -63,7 +63,7 @@ const SessionPlot = (props) => {
   }, []);
   const fetchAllSessions = () => {
     axios
-      .get("http://localhost:3001/api/sessions/" + props.habitId + "/getAll")
+      .get("/api/sessions/" + props.habitId + "/getAll")
       .then((res) => {
         const sessionsAll = res.data;
         const sessionsForPlot = [];
