@@ -26,10 +26,7 @@ const Session = (props) => {
     };
 
     axios
-      .post(
-        "http://localhost:3001/api/sessions/" + props.habitId + "/addsession",
-        session
-      )
+      .post("/api/sessions/" + props.habitId + "/addsession", session)
       .then((res) => console.log());
   };
 
