@@ -53,10 +53,7 @@ class EditHabit extends React.Component {
     };
     // console.log(habit);
     axios
-      .post(
-        "http://localhost:3001/api/habits/update/" + this.props.habitId,
-        habit
-      )
+      .post("/api/habits/update/" + this.props.habitId, habit)
       .then((res) => console.log(res.data));
 
     window.location = "/vision";

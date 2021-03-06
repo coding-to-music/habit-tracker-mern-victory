@@ -45,7 +45,7 @@ class CreateHabit extends React.Component {
       token: localStorage.getItem("token"),
     };
 
-    axios.post("http://localhost:3001/api/habits/add", habit).then((res) => {
+    axios.post("/api/habits/add", habit).then((res) => {
       console.log(res.data);
       this.props.history.push("/vision");
     });
