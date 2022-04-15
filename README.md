@@ -1,3 +1,19 @@
+# habit-tracker-mern-victory
+
+# 🚀 Javascript full-stack 🚀
+
+## MERN Stack
+
+### React / Express / MongoDB / Redux
+
+https://github.com/coding-to-music/habit-tracker-mern-victory
+
+https://habit-tracker-mern-victory.herokuapp.com
+
+by MrsKamran https://github.com/MrsKamran
+
+https://github.com/MrsKamran/habit-tracker
+
 # Vision: Habit Tracking App
 
 <br/>
@@ -57,28 +73,6 @@ Following are some enhancements in line:
   <li>Timer to practice habits</li>
   <li> Video upload for guided meditations or exercises</li>
 </ul>
-
-# habit-tracker-mern-victory
-
-# 🚀 Javascript full-stack 🚀
-
-## MERN Stack
-
-### React / Express / MongoDB / Redux
-
-https://github.com/coding-to-music/habit-tracker-mern-victory
-
-https://habit-tracker-mern-victory.herokuapp.com
-
-by MrsKamran https://github.com/MrsKamran
-
-https://github.com/MrsKamran/habit-tracker
-
-## About the Website: Maper
-
-- A location-based website using React as Frontend and NodeJs, ExpressJS as backend, and MongoDB as Database. On this website, I had use MapBox for the world map and React-Mapbox-gl for configuration. We can select the place where we had visited and added the photo URL, so the entry will be seen on the map and in the visited place area. We can delete or modify the changes in the Entry we had created. It is a responsive website with live location of a point on the map. The Backend is deployed on Heroku and the frontend is deployed on Netlify.
-
-#### The Password for the Entry: maper01
 
 ## Technology Stack
 
